@@ -9,12 +9,12 @@ public class Payroll {
 		double salary;
 		
 		//if employee has an yearly salary//
-		if(employee.payRate == "Yearly" ){
-			salary = (employee.salary/52)*2;
+		if(employee.getPayRate() == "Yearly" ){
+			salary = (employee.getSalary()/52)*2;
 		
 		}
-		else if (employee.payRate == "HOURLY" ){
-			salary = (employee.salary * employee.hours *2);
+		else if (employee.getPayRate()== "HOURLY" ){
+			salary = (employee.getSalary() * employee.getHours() *2);
 			
 		}
 		else {
@@ -34,6 +34,9 @@ public class Payroll {
 		 
 		System.out.println((calculatePay(tom)));
 		System.out.println((calculatePay(ron)));
+		
+		tom.compareSalary(ron);
+		ron.compareSalary(tom);
 		
 		
 		//calculatePay(tom);//
